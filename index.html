@@ -8,8 +8,8 @@
       h1, p { margin-bottom: 20px; }
       div#container {width: auto; margin-left:300px;}
       div#leftside { height: 140px; border-radius: 5px; position: fixed;float: left; width: 280px; border: 1px solid #dedede;}	
-	
-	div#footer {  position:absolute; bottom:0; }
+      
+      div#footer {  position:fixed; bottom:0; }
       ul.aboutlist{ padding-left: 30px;}
       img.thumb {width:6%; height:6%;}
       ul.tabNav { float: left; list-style: none; width: 100%; }
@@ -32,18 +32,18 @@
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script type="text/javascript">
 
-	$(function() {
-    $(".image")
-        .click(function() { 
-		$('#image').hide();
-		$('#image').fadeIn('slow');
-		var src = $(this).attr("rel");
-		$('#image').children().attr("src",src);
-            
-           
-        })
+      $(function() {
+      $(".image")
+      .click(function() { 
+      $('#image').hide();
+      $('#image').fadeIn('slow');
+      var src = $(this).attr("rel");
+      $('#image').children().attr("src",src);
+      
+      
+      })
 
-});
+      });
 
       function update(newTag) {
 
@@ -121,15 +121,15 @@
       <img src="media/img/meface.JPG" style="width:30%;height:80%; float: left;"/>
       Name: Octavian Geagla
       Contact me: <a href="mailto:octavian@octaviangeagla.com">email1</a>, <a href="mailto:ogeagla@gmail.com">email2</a>
-	<br /> <br />
-	
+      <br /> <br />
+      
       <br /><br /><br /><br /><br />
       This is what the government says I look like, so it must be true.
     </div>
 
 
     <div id="container" >
-<!--      <img src="media/img/cleaver.jpg" style="width:20%;height:20%;float:left;" /><h1>Insert Cleaver Title Here</h1>-->
+      <!--      <img src="media/img/cleaver.jpg" style="width:20%;height:20%;float:left;" /><h1>Insert Cleaver Title Here</h1>-->
       <ul class="tabNav">
 	<li class="current"><a href="#welcome">Welcome</a></li>
 	<li><a href="#about">About</a></li>
@@ -187,8 +187,8 @@
 		  <li>A dynamic computational intelligence engine allowing various algorithms for model parameter optimization using genetic algorithms, neural networks, and fuzzy classifiers (C++).
 
 		  </ul>
-		   <br />
-		   <a href = "https://github.com/ogeagla">My github</a>, though I haven't gotten around to posting my projects there.  Work in progress.
+		  <br />
+		  <a href = "https://github.com/ogeagla">My github</a>, though I haven't gotten around to posting my projects there.  Work in progress.
 		  
 		  
 		  </div>
@@ -229,8 +229,8 @@
 		  </div>
 		  </div>
 		  </div> 
-<div id="footer">
-All media licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>
-</div>
+		  <div id="footer">
+		    All media licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>
+		  </div>
 		  </body>
 		  </html>
