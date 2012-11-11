@@ -1,0 +1,236 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+    <style type="text/css">
+      html, body, div, h1, h2, h3, h4, h5, h6, ul, ol, dl, li, dt, dd, p, blockquote, pre, form, fieldset, table, th, td { margin: 0; padding: 0; }
+      body { font: 12px "Lucida Console", Monaco, monospace;}/* Georgia, Times, serif; }*/
+      h1, p { margin-bottom: 20px; }
+      div#container {width: auto; margin-left:300px;}
+      div#leftside { height: 140px; border-radius: 5px; position: fixed;float: left; width: 280px; border: 1px solid #dedede;}	
+	
+	div#footer {  position:absolute; bottom:0; }
+      ul.aboutlist{ padding-left: 30px;}
+      img.thumb {width:6%; height:6%;}
+      ul.tabNav { float: left; list-style: none; width: 100%; }
+      ul.tabNav li { float: left; margin: 0 1px 0 0; padding: 6px 0 0; }
+      ul.tabNav li.current { padding-top: 0; }
+      ul.tabNav a { border-radius: 15px; background: #ececec; border: 1px solid #dedede; border-width: 1px 1px 0; color: #333; display: block; padding: 4px 4px 5px 4px; text-decoration: none; }
+      ul.tabNav li.current a { background: #dedede; border: none; padding: 8px; }
+      div.tabContainer { clear: both; float: left; width: 100%; }
+      div.tabContainer div.tab { color: #000; display: none; padding: 10px; }
+      div.tabContainer div.current { display: block; }
+      div.tab p:last-child { margin-bottom: 0; }
+      div.contentContainer div.about {display: none;}
+      div.contentContainer div.home {display: none;}
+      div.contentContainer div.current { display: block;}
+      
+      
+
+
+    </style> 
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript">
+
+	$(function() {
+    $(".image")
+        .click(function() { 
+		$('#image').hide();
+		$('#image').fadeIn('slow');
+		var src = $(this).attr("rel");
+		$('#image').children().attr("src",src);
+            
+           
+        })
+
+});
+
+      function update(newTag) {
+
+      var active = $('ul.tabNav li.current a');
+      
+      
+      var h = $(newTag).attr('href');
+      location.hash = h;
+
+      activeHash = $(active).attr('href');
+
+      deactivate(activeHash);
+      
+
+      hash = $(newTag).attr('href');	
+      
+      activate(hash);
+      
+      updateTab(newTag);
+      
+      active = newTag;
+      }
+
+      function deactivate(tag) {
+      $(tag).slideUp('fast', function () {
+      $(tag).removeClass('current');
+      });
+      }
+
+      function activate(tag) {
+      $(tag).slideDown('normal', function () {
+      $(tag).addClass('current');
+      });
+      }
+
+      function updateTab(newTag) {
+      
+      $(newTag).parent().parent().children('.current').removeClass('current');
+      $(newTag).parent().addClass('current');
+      }
+
+
+
+      $(document).ready(function(){
+      
+      var param = document.URL.split('#')[1];
+      if((param != '') && (param != undefined)) {
+
+      var d = $('a[href="'+window.location.hash+'"]');
+      var e = $("a").filter(function() { return this.hash == location.hash; });
+      update(d);
+      
+      } else {
+      var a = $('ul.tabNav li.current a');
+      
+      location.hash = $(a).attr('href');
+
+      }
+
+
+      $('ul.tabNav a').click(function() {
+
+      update(this);
+
+      return false;
+      });
+      }); 
+    </script>
+  </head>
+
+  <body>
+
+    <div id="leftside" >
+      
+      <img src="media/img/meface.JPG" style="width:30%;height:80%; float: left;"/>
+      Name: Octavian Geagla
+      Contact me: <a href="mailto:octavian@octaviangeagla.com">email1</a>, <a href="mailto:ogeagla@gmail.com">email2</a>
+	<br /> <br />
+	
+      <br /><br /><br /><br /><br />
+      This is what the government says I look like, so it must be true.
+    </div>
+
+
+    <div id="container" >
+<!--      <img src="media/img/cleaver.jpg" style="width:20%;height:20%;float:left;" /><h1>Insert Cleaver Title Here</h1>-->
+      <ul class="tabNav">
+	<li class="current"><a href="#welcome">Welcome</a></li>
+	<li><a href="#about">About</a></li>
+	<li><a href="#pics">ClimbPics</a></li>
+      </ul>
+      <div class="tabContainer">
+
+	<div class="tab current" id="welcome">
+	  Welcome!  Please navigate using the tabs above.
+	</div>
+	<div class="tab" id="about">
+	  <br />	
+	  <h3>What I Do </h3>
+	  <br />
+	  I currently work as an Analytics Research Engineer at Netuitive in Reston, VA.:
+	  <br /> <br /> 
+	  <ul class="aboutlist">
+	    <li>Design and develop algorithms for predictive analytics using oodles of statistics, numerical analysis, and machine learning concepts.
+	    <li>Rapid application prototyping using GWT, Spring MVC, JAX-RS, Cassandra, etc.
+	    </ul> 
+	    <br />
+	    <h3>What I Can Do </h3>
+	    <br />
+	    <ul class="aboutlist">
+	      <li>Anything involving machine learning, non-deterministic systems, optimization, or the word "discretization". 
+	      <li>High-performance computing and algorithms, parallel/distributed systems.
+	      <li>Develop on many platforms in many languages using many frameworks/libraries.
+	      <li>NoSQL, HTML5, multi-tier web apps.
+	      <li>Data science, analytics, 'big data'.
+	      </ul>
+	      <br />
+
+	      <h3>What I've Done (Dev Edition)</h3>
+	      <br />		
+	      <ul class="aboutlist">
+		<li>Java web application development.
+		<li>Web UI/UX using JS/CSS.
+		<li>Restful web services using RDBMS/NoSQL. 
+		<li>Matlab/Mathematica/R for algorithm prototyping and testing.
+		<li>C/C++ parallel/large-scale/high-performance applications.
+		<li>Game development, audio processing, raytracing.
+		  
+
+		</ul>
+		<br />
+		<h3>What I've Done (Science Edition)</h3>
+		<br />
+		<ul class="aboutlist">
+		  <li>Novel visualization of high-dimensinal statistics using choropleth maps (C#/GDI+/OpenGL).
+		  <li>Non-linear equation solving/fitting using Levenberg-Marquardt for photodisintegration cross-sections of proton pairs (C/Root).
+		  <li>Noisy particle track reconstruction using Kalman Filtering (C/Root).
+		  <li>Calcium ion intracellular diffusion simulation framework (C++/GSL).
+		  <li>Modeling and simulation of micromagnetics in spin-torque transfer magnetic systems (C++/OOMF/TclTk).
+		  <li>Development of an advanced and efficient methodology for multiphysics reactor neutron simulation (C++/Python).
+		  <li>A dynamic computational intelligence engine allowing various algorithms for model parameter optimization using genetic algorithms, neural networks, and fuzzy classifiers (C++).
+
+		  </ul>
+		   <br />
+		   <a href = "https://github.com/ogeagla">My github</a>, though I haven't gotten around to posting my projects there.  Work in progress.
+		  
+		  
+		  </div>
+
+
+
+		  <div class="tab" id="pics">
+		    
+		    
+		    <div id="image"><img src="media/img/2012-09-29_17-40-09_896.jpg" border="0" style="height: 75%; width: auto; margin-left: 26%; position: fixed;"/></div>	
+		    <a href="#pics" rel="media/img/2012-09-29_17-40-09_896.jpg" class="image" ><img src="media/img/2012-09-29_17-40-09_896.thumb.jpg" class="thumb" border="0" id="thumb"/></a>
+		    <a href="#pics" rel="media/img/2012-09-29_17-41-39_396.jpg" class="image" ><img src="media/img/2012-09-29_17-41-39_396.thumb.jpg" class="thumb" border="0" /></a>
+		    <a href="#pics" rel="media/img/2012-10-21_11-59-57_47.jpg" class="image" ><img src="media/img/2012-10-21_11-59-57_47.thumb.jpg" class="thumb" border="0" /></a>
+		    <a href="#pics" rel="media/img/2012-10-21_12-02-23_332.jpg" class="image" ><img src="media/img/2012-10-21_12-02-23_332.thumb.jpg" class="thumb" border="0" /></a><br />
+		    <a href="#pics" rel="media/img/2012-10-21_12-02-53_764.jpg" class="image" ><img src="media/img/2012-10-21_12-02-53_764.thumb.jpg" class="thumb" border="0" /></a>
+		    <a href="#pics" rel="media/img/2012-10-21_12-03-01_258.jpg" class="image" ><img src="media/img/2012-10-21_12-03-01_258.thumb.jpg" class="thumb" border="0" /></a>
+		    <a href="#pics" rel="media/img/2012-10-21_12-04-31_860.jpg" class="image" ><img src="media/img/2012-10-21_12-04-31_860.thumb.jpg" class="thumb" border="0" /></a><br />
+		    <a href="#pics" rel="media/img/IMG_20120929_170508.jpg" class="image" ><img src="media/img/IMG_20120929_170508.thumb.jpg" class="thumb" border="0" /></a>
+		    <a href="#pics" rel="media/img/IMG_20120929_172706.jpg" class="image" ><img src="media/img/IMG_20120929_172706.thumb.jpg" class="thumb" border="0" /></a><br />
+		    <a href="#pics" rel="media/img/IMG_20120929_154701.jpg" class="image" ><img src="media/img/IMG_20120929_154701.thumb.jpg" class="thumb" border="0" /></a>
+		    <a href="#pics" rel="media/img/IMG_20120929_154712.jpg" class="image" ><img src="media/img/IMG_20120929_154712.thumb.jpg" class="thumb" border="0" /></a>
+		    <a href="#pics" rel="media/img/IMG_20120929_154746.jpg" class="image" ><img src="media/img/IMG_20120929_154746.thumb.jpg" class="thumb" border="0" /></a><br />
+		    <a href="#pics" rel="media/img/IMG_20120929_170214.jpg" class="image" ><img src="media/img/IMG_20120929_170214.thumb.jpg" class="thumb" border="0" /></a>
+		    <a href="#pics" rel="media/img/IMG_20120929_170232.jpg" class="image" ><img src="media/img/IMG_20120929_170232.thumb.jpg" class="thumb" border="0" /></a><br />
+		    <a href="#pics" rel="media/img/IMG_20120929_170242.jpg" class="image" ><img src="media/img/IMG_20120929_170242.thumb.jpg" class="thumb" border="0" /></a>
+		    <a href="#pics" rel="media/img/IMG_20120929_170307.jpg" class="image" ><img src="media/img/IMG_20120929_170307.thumb.jpg" class="thumb" border="0" /></a><br />
+
+		    <a href="#pics" rel="media/img/2012-10-21_12-05-15_100.jpg" class="image" ><img src="media/img/2012-10-21_12-05-15_100.thumb.jpg" class="thumb" border="0" /></a>
+		    <a href="#pics" rel="media/img/2012-10-21_12-05-41_596.jpg" class="image" ><img src="media/img/2012-10-21_12-05-41_596.thumb.jpg" class="thumb" border="0" /></a><br />
+		    <a href="#pics" rel="media/img/2012-10-21_12-05-55_527.jpg" class="image" ><img src="media/img/2012-10-21_12-05-55_527.thumb.jpg" class="thumb" border="0" /></a>
+		    <a href="#pics" rel="media/img/2012-10-21_12-05-59_517.jpg" class="image" ><img src="media/img/2012-10-21_12-05-59_517.thumb.jpg" class="thumb" border="0" /></a><br />
+		    <a href="#pics" rel="media/img/2012-10-21_12-06-03_383.jpg" class="image" ><img src="media/img/2012-10-21_12-06-03_383.thumb.jpg" class="thumb" border="0" /></a>
+		    <a href="#pics" rel="media/img/2012-10-21_12-06-12_249.jpg" class="image" ><img src="media/img/2012-10-21_12-06-12_249.thumb.jpg" class="thumb" border="0" /></a><br />
+
+
+		    
+
+		  </div>
+		  </div>
+		  </div> 
+<div id="footer">
+All media licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>
+</div>
+		  </body>
+		  </html>
