@@ -1,0 +1,21 @@
+html, body, div, h1, h2, h3, h4, h5, h6, ul, ol, dl, li, dt, dd, p, blockquote, pre, form, fieldset, table, th, td { margin: 0; padding: 0; }
+body { font: 12px "Lucida Console", Monaco, monospace;}/* Georgia, Times, serif; }*/
+h1, p { margin-bottom: 20px; }
+div#container {width: auto; margin-left:300px;}
+div#leftside { height: 140px; border-radius: 5px; position: fixed;float: left; width: 280px; border: 1px solid #dedede;}	
+
+div#footer {  position:fixed; bottom:0; }
+ul.aboutlist{ padding-left: 30px;}
+img.thumb {width:6%; height:6%;}
+ul.tabNav { float: left; list-style: none; width: 100%; }
+ul.tabNav li { float: left; margin: 0 1px 0 0; padding: 6px 0 0; }
+ul.tabNav li.current { padding-top: 0; }
+ul.tabNav a { border-radius: 15px; background: #ececec; border: 1px solid #dedede; border-width: 1px 1px 0; color: #333; display: block; padding: 4px 4px 5px 4px; text-decoration: none; }
+ul.tabNav li.current a { background: #dedede; border: none; padding: 8px; }
+div.tabContainer { clear: both; float: left; width: 100%; }
+div.tabContainer div.tab { color: #000; display: none; padding: 10px; }
+div.tabContainer div.current { display: block; }
+div.tab p:last-child { margin-bottom: 0; }
+div.contentContainer div.about {display: none;}
+div.contentContainer div.home {display: none;}
+div.contentContainer div.current { display: block;}
