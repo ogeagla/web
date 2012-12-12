@@ -1,7 +1,8 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html >
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+    <!--<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> -->
+    <meta charset="utf-8" />
     <link rel="stylesheet" href="css/style.css" type="text/css"/>
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
@@ -9,134 +10,146 @@
   </head>
 
   <body>
+    <div id="wrapper">
+      <div id="headerwrap">
+        <div id="header">
+          
+            <ul class="tabNav">
+	      		<li class="current"><a href="#welcome">Welcome</a></li>
+	      		<li><a href="#about">About</a></li>
+	      		<li><a href="#projects">Projects</a></li>
+	      		<!--<li><a href="#pics">ClimbPics</a></li>-->
 
-    <div id="leftside" >
-      
-      <img src="media/img/meface.JPG" style="width:30%;height:80%; float: left;"/>
-      Name: Octavian Geagla <br />
-      Contact me: <a href="mailto:octavian@octaviangeagla.com">email1</a>, <a href="mailto:ogeagla@gmail.com">email2</a>
-      <br /> <br />
-      
-      <br /><br /><br /><br /><br />
-      This is what the government says I look like, so it must be true.
-    </div>
-
-
-    <div id="container" >
-      <!--      <img src="media/img/cleaver.jpg" style="width:20%;height:20%;float:left;" /><h1>Insert Cleaver Title Here</h1>-->
-      <ul class="tabNav">
-	<li class="current"><a href="#welcome">Welcome</a></li>
-	<li><a href="#about">About</a></li>
-	<li><a href="#projects">Projects</a></li>
-	<li><a href="#pics">ClimbPics</a></li>
-      </ul>
-      <div class="tabContainer">
-
-	<div class="tab current" id="welcome">
-	  Welcome!  This is a work in progress.  Please navigate using the tabs above.
-	</div>
-	<div class="tab" id="about">
-	  <br />	
-	  <h3>What I Do </h3>
-	  <br />
-	  I currently work as an Analytics Research Engineer at Netuitive in Reston, VA.:
-	  <br /> <br /> 
-	  <ul class="aboutlist">
-	    <li>Design and develop predictive models and algorithms for noisy time series analysis.</li>
-	    <li>Rapid application prototyping (front-end, back-end, APIs, RDBMS, NoSQL).</li>
-	  </ul> 
-	  <br />
-	  <h3>What I Can Do </h3>
-	  <br />
-	  
-	  
-	  Math-ish-y:
-	  <br />
-	  <br />
-	  <ul class="aboutlist">
-	    <li>Machine learning and statistical methods. </li>
-	    <li>Non-linear optimization and solving. </li>
-	    <li>Numerical methods and complexity analysis. </li>
-	    <li>Non-deterministic/noisy systems. </li>
-	    <li>High performance and parallel computing. </li>
- 	  </ul>
-	  <br />
-	  Dev-ish-y:
-	  <ul class="aboutlist">
-	    <br />
-	    <li>Big data. (There, I said it!) </li>
-	    <li>Data-centric architecture design and deployment. </li>
-	    <li>End-to-end application design and development. </li>
-	    <li>Visualization and UX. </li>
-	    <br />
-
- 	  </ul>
-	  <br />
-	  <h3>What I Like To Do</h3>
-	  <br />
-	  <ul class="aboutlist">
-	    
-	    <li>Do wizard magic and tell you lots of actionable things about your data. </li>
-	    <li>Design an application architecture with your data in mind. </li>
-	    <li>Build a back end using an appropriate data store. </li>
-	    <li>Build an API to meet your data serving needs. </li>
-	    <li>Create a client to help you interact and visualize your data. </li>
-
-	  </ul>
-	  
-	  
-	  
-	  
-	  
-	</div>
-	
-	<div class="tab" id="projects">
-	  <br />
-	  
-	  <ul class="aboutlist">
-	    <li><a href="https://github.com/ogeagla/web">This</a> page on github.</li>
-	    <br />
-	    <li><a href="http://hashmeat.org">HashMeat</a>.  The product of Data Community DC's contingent at <a href="http://www.foodtechconnect.com/2012/11/07/get-ready-to-hack-meat-food-tech-hackathon/">Hack//Meat</a>, a hackathon of meat.  <a href="linknothereyet">Blog post</a> about HashMeat.</li>
-	  </ul>
-	</div>
-	
-	
-	<div class="tab" id="pics">
-	  
-	  
-	  <div id="image"><img src="media/img/2012-09-29_17-40-09_896.jpg" border="0" style="height: 75%; width: auto; margin-left: 26%; position: fixed;"/></div>	
-	  <a href="#pics" rel="media/img/2012-09-29_17-40-09_896.jpg" class="image" ><img src="media/img/2012-09-29_17-40-09_896.thumb.jpg" class="thumb" border="0" id="thumb"/></a>
-	  <a href="#pics" rel="media/img/2012-09-29_17-41-39_396.jpg" class="image" ><img src="media/img/2012-09-29_17-41-39_396.thumb.jpg" class="thumb" border="0" /></a>
-	  <a href="#pics" rel="media/img/2012-10-21_11-59-57_47.jpg" class="image" ><img src="media/img/2012-10-21_11-59-57_47.thumb.jpg" class="thumb" border="0" /></a>
-	  <a href="#pics" rel="media/img/2012-10-21_12-02-23_332.jpg" class="image" ><img src="media/img/2012-10-21_12-02-23_332.thumb.jpg" class="thumb" border="0" /></a><br />
-	  <a href="#pics" rel="media/img/2012-10-21_12-02-53_764.jpg" class="image" ><img src="media/img/2012-10-21_12-02-53_764.thumb.jpg" class="thumb" border="0" /></a>
-	  <a href="#pics" rel="media/img/2012-10-21_12-03-01_258.jpg" class="image" ><img src="media/img/2012-10-21_12-03-01_258.thumb.jpg" class="thumb" border="0" /></a>
-	  <a href="#pics" rel="media/img/2012-10-21_12-04-31_860.jpg" class="image" ><img src="media/img/2012-10-21_12-04-31_860.thumb.jpg" class="thumb" border="0" /></a><br />
-	  <a href="#pics" rel="media/img/IMG_20120929_170508.jpg" class="image" ><img src="media/img/IMG_20120929_170508.thumb.jpg" class="thumb" border="0" /></a>
-	  <a href="#pics" rel="media/img/IMG_20120929_172706.jpg" class="image" ><img src="media/img/IMG_20120929_172706.thumb.jpg" class="thumb" border="0" /></a><br />
-	  <a href="#pics" rel="media/img/IMG_20120929_154701.jpg" class="image" ><img src="media/img/IMG_20120929_154701.thumb.jpg" class="thumb" border="0" /></a>
-	  <a href="#pics" rel="media/img/IMG_20120929_154712.jpg" class="image" ><img src="media/img/IMG_20120929_154712.thumb.jpg" class="thumb" border="0" /></a>
-	  <a href="#pics" rel="media/img/IMG_20120929_154746.jpg" class="image" ><img src="media/img/IMG_20120929_154746.thumb.jpg" class="thumb" border="0" /></a><br />
-	  <a href="#pics" rel="media/img/IMG_20120929_170214.jpg" class="image" ><img src="media/img/IMG_20120929_170214.thumb.jpg" class="thumb" border="0" /></a>
-	  <a href="#pics" rel="media/img/IMG_20120929_170232.jpg" class="image" ><img src="media/img/IMG_20120929_170232.thumb.jpg" class="thumb" border="0" /></a><br />
-	  <a href="#pics" rel="media/img/IMG_20120929_170242.jpg" class="image" ><img src="media/img/IMG_20120929_170242.thumb.jpg" class="thumb" border="0" /></a>
-	  <a href="#pics" rel="media/img/IMG_20120929_170307.jpg" class="image" ><img src="media/img/IMG_20120929_170307.thumb.jpg" class="thumb" border="0" /></a><br />
-
-	  <a href="#pics" rel="media/img/2012-10-21_12-05-15_100.jpg" class="image" ><img src="media/img/2012-10-21_12-05-15_100.thumb.jpg" class="thumb" border="0" /></a>
-	  <a href="#pics" rel="media/img/2012-10-21_12-05-41_596.jpg" class="image" ><img src="media/img/2012-10-21_12-05-41_596.thumb.jpg" class="thumb" border="0" /></a><br />
-	  <a href="#pics" rel="media/img/2012-10-21_12-05-55_527.jpg" class="image" ><img src="media/img/2012-10-21_12-05-55_527.thumb.jpg" class="thumb" border="0" /></a>
-	  <a href="#pics" rel="media/img/2012-10-21_12-05-59_517.jpg" class="image" ><img src="media/img/2012-10-21_12-05-59_517.thumb.jpg" class="thumb" border="0" /></a><br />
-	  <a href="#pics" rel="media/img/2012-10-21_12-06-03_383.jpg" class="image" ><img src="media/img/2012-10-21_12-06-03_383.thumb.jpg" class="thumb" border="0" /></a>
-	  <a href="#pics" rel="media/img/2012-10-21_12-06-12_249.jpg" class="image" ><img src="media/img/2012-10-21_12-06-12_249.thumb.jpg" class="thumb" border="0" /></a><br />
-
-
-	  
-
-	</div>
+	    		</ul>
+          
+         
+        </div>
       </div>
-    </div> 
-    <div id="footer">
-      All media licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>
+      <div id="contentliquid"><div id="contentwrap">
+          <div id="content">          
+            <div class="tabContainer">
+	      		<div class="tab current" id="welcome">
+						Welcome!  This is a work in progress.  Please navigate using the tabs above.
+	      		</div>
+	      		<div class="tab" id="about">
+		<h3>What I Do </h3>
+		<br />
+		I currently work as an Analytics Research Engineer at Netuitive in Reston, VA.:
+		<br /> <br /> 
+		<ul class="aboutlist">
+		  <li>Design and develop predictive models and algorithms for noisy time series analysis.</li>
+		  <li>Rapid application prototyping (front-end, back-end, APIs, RDBMS, NoSQL).</li>
+		</ul> 
+		<br />
+		<h3>What I Can Do </h3>
+		<br />
+		
+		
+		Math-ish-y:
+		<br />
+		<br />
+		<ul class="aboutlist">
+		  <li>Machine learning and statistical methods. </li>
+		  <li>Non-linear optimization and solving. </li>
+		  <li>Numerical methods and complexity analysis. </li>
+		  <li>Non-deterministic/noisy systems. </li>
+		  <li>High performance and parallel computing. </li>
+ 		</ul>
+		<br />
+		Dev-ish-y:
+		<ul class="aboutlist">
+		  <br />
+		  <li>Big data. (There, I said it!) </li>
+		  <li>Data-centric architecture design and deployment. </li>
+		  <li>End-to-end application design and development. </li>
+		  <li>Visualization and UX. </li>
+		  <br />
+
+ 		</ul>
+		<br />
+		<h3>What I Like To Do</h3>
+		<br />
+		<ul class="aboutlist">
+		  
+		  <li>Do wizard magic and tell you lots of actionable things about your data. </li>
+		  <li>Design an application architecture with your data in mind. </li>
+		  <li>Build a back end using an appropriate data store. </li>
+		  <li>Build an API to meet your data serving needs. </li>
+		  <li>Create a client to help you interact and visualize your data. </li>
+
+		</ul>
+
+		
+		
+		
+		
+	      </div>
+
+	      		<div class="tab" id="projects">
+		<br />
+		
+		<ul class="aboutlist">
+		  <li><a href="https://github.com/ogeagla/web">This</a> page on github.</li>
+		  <br />
+		  <li><a href="http://hashmeat.org">HashMeat</a>.  The product of Data Community DC's contingent at <a href="http://www.foodtechconnect.com/2012/11/07/get-ready-to-hack-meat-food-tech-hackathon/">Hack//Meat</a>, a hackathon of meat.  <a href="linknothereyet">Blog post</a> about HashMeat.</li>
+		</ul>
+	      </div>
+	      
+	      
+	      <!--<div class="tab" id="pics">
+		
+		
+		<div id="image"><img src="media/img/2012-09-29_17-40-09_896.jpg" border="0" style="height: 75%; width: auto; margin-left: 26%; position: fixed;"/></div>	
+		<a href="#pics" rel="media/img/2012-09-29_17-40-09_896.jpg" class="image" ><img src="media/img/2012-09-29_17-40-09_896.thumb.jpg" class="thumb" border="0" id="thumb"/></a>
+		<a href="#pics" rel="media/img/2012-09-29_17-41-39_396.jpg" class="image" ><img src="media/img/2012-09-29_17-41-39_396.thumb.jpg" class="thumb" border="0" /></a>
+		<a href="#pics" rel="media/img/2012-10-21_11-59-57_47.jpg" class="image" ><img src="media/img/2012-10-21_11-59-57_47.thumb.jpg" class="thumb" border="0" /></a>
+		<a href="#pics" rel="media/img/2012-10-21_12-02-23_332.jpg" class="image" ><img src="media/img/2012-10-21_12-02-23_332.thumb.jpg" class="thumb" border="0" /></a><br />
+		<a href="#pics" rel="media/img/2012-10-21_12-02-53_764.jpg" class="image" ><img src="media/img/2012-10-21_12-02-53_764.thumb.jpg" class="thumb" border="0" /></a>
+		<a href="#pics" rel="media/img/2012-10-21_12-03-01_258.jpg" class="image" ><img src="media/img/2012-10-21_12-03-01_258.thumb.jpg" class="thumb" border="0" /></a>
+		<a href="#pics" rel="media/img/2012-10-21_12-04-31_860.jpg" class="image" ><img src="media/img/2012-10-21_12-04-31_860.thumb.jpg" class="thumb" border="0" /></a><br />
+		<a href="#pics" rel="media/img/IMG_20120929_170508.jpg" class="image" ><img src="media/img/IMG_20120929_170508.thumb.jpg" class="thumb" border="0" /></a>
+		<a href="#pics" rel="media/img/IMG_20120929_172706.jpg" class="image" ><img src="media/img/IMG_20120929_172706.thumb.jpg" class="thumb" border="0" /></a><br />
+		<a href="#pics" rel="media/img/IMG_20120929_154701.jpg" class="image" ><img src="media/img/IMG_20120929_154701.thumb.jpg" class="thumb" border="0" /></a>
+		<a href="#pics" rel="media/img/IMG_20120929_154712.jpg" class="image" ><img src="media/img/IMG_20120929_154712.thumb.jpg" class="thumb" border="0" /></a>
+		<a href="#pics" rel="media/img/IMG_20120929_154746.jpg" class="image" ><img src="media/img/IMG_20120929_154746.thumb.jpg" class="thumb" border="0" /></a><br />
+		<a href="#pics" rel="media/img/IMG_20120929_170214.jpg" class="image" ><img src="media/img/IMG_20120929_170214.thumb.jpg" class="thumb" border="0" /></a>
+		<a href="#pics" rel="media/img/IMG_20120929_170232.jpg" class="image" ><img src="media/img/IMG_20120929_170232.thumb.jpg" class="thumb" border="0" /></a><br />
+		<a href="#pics" rel="media/img/IMG_20120929_170242.jpg" class="image" ><img src="media/img/IMG_20120929_170242.thumb.jpg" class="thumb" border="0" /></a>
+		<a href="#pics" rel="media/img/IMG_20120929_170307.jpg" class="image" ><img src="media/img/IMG_20120929_170307.thumb.jpg" class="thumb" border="0" /></a><br />
+
+		<a href="#pics" rel="media/img/2012-10-21_12-05-15_100.jpg" class="image" ><img src="media/img/2012-10-21_12-05-15_100.thumb.jpg" class="thumb" border="0" /></a>
+		<a href="#pics" rel="media/img/2012-10-21_12-05-41_596.jpg" class="image" ><img src="media/img/2012-10-21_12-05-41_596.thumb.jpg" class="thumb" border="0" /></a><br />
+		<a href="#pics" rel="media/img/2012-10-21_12-05-55_527.jpg" class="image" ><img src="media/img/2012-10-21_12-05-55_527.thumb.jpg" class="thumb" border="0" /></a>
+		<a href="#pics" rel="media/img/2012-10-21_12-05-59_517.jpg" class="image" ><img src="media/img/2012-10-21_12-05-59_517.thumb.jpg" class="thumb" border="0" /></a><br />
+		<a href="#pics" rel="media/img/2012-10-21_12-06-03_383.jpg" class="image" ><img src="media/img/2012-10-21_12-06-03_383.thumb.jpg" class="thumb" border="0" /></a>
+		<a href="#pics" rel="media/img/2012-10-21_12-06-12_249.jpg" class="image" ><img src="media/img/2012-10-21_12-06-12_249.thumb.jpg" class="thumb" border="0" /></a><br />
+
+
+		
+
+	      </div>-->
+	    </div>
+            
+          </div>
+      </div></div>
+      <div id="leftcolumnwrap">
+        <div id="leftcolumn">
+          <p>
+          	<img src="media/img/meface.JPG" class="face"/>
+	   		<br />
+	    		Contact me <a href="mailto:octavian@octaviangeagla.com">here</a> <br /> or <a href="mailto:ogeagla@gmail.com">here</a>.
+	    		
+	  		</p>
+        </div>
+      </div>
+      <div id="footerwrap">
+        <div id="footer">
+          <p>All <a href="media">media</a> licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a><br />
+				All <a href="https://github.com/ogeagla/web">code</a> licensed under<a href="https://www.gnu.org/copyleft/lesser.html">LGPLv3</a>          
+          </p>
+        </div>
+      </div>
     </div>
+
   </body>
 </html>

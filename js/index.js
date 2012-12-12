@@ -7,9 +7,12 @@ $(function() {
 	    $('#image').children().attr("src",src);
 
 
-	})
-
+	});
+ 
+    
 });
+
+
 
 function update(newTag) {
 
