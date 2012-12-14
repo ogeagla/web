@@ -18,6 +18,7 @@
 	      		<li class="current"><a href="#welcome">Welcome</a></li>
 	      		<li><a href="#about">About</a></li>
 	      		<li><a href="#projects">Projects</a></li>
+	      		<li><a href="#dsdc">DSDC</a></li>
 	      		<!--<li><a href="#pics">ClimbPics</a></li>-->
 
 	    		</ul>
@@ -89,10 +90,54 @@
 		<br />
 		
 		<ul class="aboutlist">
-		  <li><a href="https://github.com/ogeagla/web">This</a> page on github.</li>
+		  <li><a href="https://github.com/ogeagla/web">This web page</a> on github.</li>
 		  <br />
-		  <li><a href="http://hashmeat.org">HashMeat</a>.  The product of Data Community DC's contingent at <a href="http://www.foodtechconnect.com/2012/11/07/get-ready-to-hack-meat-food-tech-hackathon/">Hack//Meat</a>, a hackathon of meat.  <a href="linknothereyet">Blog post</a> about HashMeat.</li>
-		</ul>
+		  <li><a href="http://hashmeat.org">HashMeat</a>.  The product of Data Community DC's contingent at <a href="http://www.foodtechconnect.com/2012/11/07/get-ready-to-hack-meat-food-tech-hackathon/">Hack//Meat</a>, a hackathon of meat.  <a href="http://datacommunitydc.org/blog/2012/12/hackmeat-or-data-community-dc-members-go-to-nyc/">Blog post</a> about HashMeat.</li>
+		  <br />
+		  <li><a href="http://octaviangeagla.com/#dsdc">DSDC Visualization Contest 2012</a></li>
+		  	</ul>
+	      </div>
+	      <div class="tab" id="dsdc">
+	      	<h3>Data Science DC Visualization Contest 2012 Entry: DSDC Members' Nth-Reply Hour-of-Day Density for M-Quantile Descending Total Attendance</h3>
+	      	           <!-- %titleStr = sprintf('First Attendance Density for Descending Total Attendance %d-Quantile', rollUps);
+            %returns n-th attendence invitation reply time bin (and per member)-->
+	      	
+	      	<br />
+	      	The image you see below is the entry.  In summary, we are visualizing the hour-of-day of a member's Nth reply partitioned into quantiles based on desceding total attendence by member.
+	      	<br />
+	    		<br />
+	    		For each plot:
+	    			<ul class="aboutlist">
+	    				<li>The horizontal axis is a tally of the time, binned by hour, starting at midnight and ending at midnight.  The time represents the hour of day when the DSDC member replied to the meetup invitation.  There are 24 horizontal bins. </li>
+	    				<li>The vertical axis represents (in chronological order) a tally of the Nth reply.  I.e., if a member's first meetup reply was for the 5th meetup at noon and the second reply was for the 7th meetup and was also at noon, this data is tallied in the bottom-most and first up from the bottom bins around the horizontal midpoint, representing a first and second reply.  There are 17 vertical bins.  Only one person had a 17th reply, which implies one person had perfect attendance. </li>
+	    			</ul>
+
+	    		
+	    		<br />
+	    		As a whole:
+	    		<ul class="aboutlist"> 
+	    			<li>The first row represents the total Nth reply hour-of-day density.   </li>
+	    			<li>Each successive row partitions the data into M (where M = 1, 2, 4, and 8 for the 1st, 2nd, 3rd, and 4th rows, respectively) quantiles by total member attendance, first sorted in descending order of meetups attended.   </li>
+	    			<li>The quantile for each row is the number of columns (plots per row), where the left-most plot is the top quantile. </li>
+	    			<li>This means that the first (left-most) plot of the 2-quantile row contains the hour-of-day Nth reply density for the upper %50 of members by total attendance count.   </li>
+	    			<li>For example, the last (right-most) plot of the 8-quantile row represents the bottom %12.5 of all members by the total meetups they have replied to. </li>
+	    			
+	    		</ul>
+	    			
+	    		
+	    		<br />
+	    		
+	      	<img src="media/img/dsdc_visualization.png" class="dsdcviz"/>
+	      	<div class="caption"><a href="media/img/dsdc_visualization.png">Higher Quality Version</a></div>
+	      	<br />
+	      	<h3>Sure Octavian, that's nice, but why? </h3>
+	      	I believe the following:
+	      	<ul class="aboutlist"> 
+	      		<li>For a given attendance record (or newness to the group), one can observe the trend that the subsequent replies take in terms of the hour of day when the member will reply to the invite.  This can be useful when trying to infer which times are best to send an invitation email or target low-attendance users.</li>
+	      		<li>From observing the 8-quantile plots, one can see that the members with the best attendance (left-most plot) seem to scatter the replies throughout the day.  We are not too concerned with this group, as they are the officers and regulars of the meetup; they will attend with high probability.  However, looking at the bottom five 8-quantiles, we begin to observe hot spots of replies centered around a particular hour of the day.  Perhaps this data is actionable!</li>
+	      		<li>In conclusion, there could be value in ths visualization for tracking trends of member reply times partitioned by how "regular" they are to the meetup.  More data is needed!</li>
+	      	
+	      	</ul>
 	      </div>
 	      
 	      
@@ -145,7 +190,7 @@
       <div id="footerwrap">
         <div id="footer">
           <p>All <a href="media">media</a> licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a><br />
-				All <a href="https://github.com/ogeagla/web">code</a> licensed under<a href="https://www.gnu.org/copyleft/lesser.html">LGPLv3</a>          
+				All <a href="https://github.com/ogeagla/web">code</a> licensed under <a href="https://www.gnu.org/copyleft/lesser.html">LGPLv3</a>          
           </p>
         </div>
       </div>

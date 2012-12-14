@@ -15,11 +15,21 @@ p {
 		width: 30%;
 		float: left;
 }
+.dsdcviz {
+		/*height: 100%;*/
+	  width: 65%;
+	  
+
+}
+.caption {
+	margin-left: 28%;
+	/*text-align: center;*/
+}
 
 #wrapper {
     width: 100%;
     min-width: 600px;
-    max-width: 1000px;
+    max-width: 2000px;
     margin: 0 auto;
 }
 
@@ -128,8 +138,8 @@ div.tabContainer div.tab {
 }
 div.tabContainer div.current { 
     display: block; 
-    border-radius: 10px;
-    border: 1px solid black;
+    /*border-radius: 10px;
+    border: 1px solid black;*/
 }
 div.tab p:last-child { 
     margin-bottom: 0; 
