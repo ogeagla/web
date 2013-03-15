@@ -11,9 +11,9 @@ p {
     padding: 10px;
 }
 .face {
-		height: 30%;
-		width: 30%;
-		float: left;
+		height: 90px;/*30%;*/
+		width: 60px;
+		/*float: left;*/
 }
 .dsdcviz {
 		/*height: 100%;*/

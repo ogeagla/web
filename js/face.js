@@ -174,7 +174,7 @@ function updateImagePixels() {
     //effectPurpleGreen2();
     //distort();
     
-    ctx.putImageData(imagePixels, 0, 0, canvasWidth, canvasHeight);
+    ctx.putImageData(imagePixels, 0, 0);//, canvasWidth, canvasHeight);
     
 }
 function drawStuff() {

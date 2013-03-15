@@ -49,7 +49,7 @@ image.src = 'media/img/meface.JPG';
 
 $(document).ready(function(){
 
-    playgroundCanvas = document.getElementById('playgroundCanvas');
+    /*playgroundCanvas = document.getElementById('playgroundCanvas');
     
     canvasWidth = playgroundCanvas.width;//600;
     canvasHeight = playgroundCanvas.height;//800;
@@ -62,7 +62,7 @@ $(document).ready(function(){
   	
     } else {
 	// canvas-unsupported code here
-    }
+    }*/
 
 });
 
