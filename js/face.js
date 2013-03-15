@@ -11,12 +11,12 @@ colors[5] = '#b8600a';
 colors[6] = '#db6e04';
 colors[7] = '#f37901';
 
-var playgroundCanvas = '';//= document.getElementById('playgroundCanvas');
+var faceCanvas = '';//= document.getElementById('faceCanvas');
 var ctx = '';
 var imagePixels = '';
 
-var canvasWidth = '';//playgroundCanvas.width;//600;
-var canvasHeight = '';//playgroundCanvas.height;//800;
+var canvasWidth = '';//faceCanvas.width;//600;
+var canvasHeight = '';//faceCanvas.height;//800;
 
 var leftEyeXRatio = 0.33;
 var leftEyeYRatio = 0.4183;
@@ -49,14 +49,14 @@ image.src = 'media/img/meface.JPG';
 
 $(document).ready(function(){
 
-    playgroundCanvas = document.getElementById('playgroundCanvas');
+    faceCanvas = document.getElementById('faceCanvas');
     
-    canvasWidth = playgroundCanvas.width;//600;
-    canvasHeight = playgroundCanvas.height;//800;
+    canvasWidth = faceCanvas.width;//600;
+    canvasHeight = faceCanvas.height;//800;
     eyeRadius = canvasHeight/50;
 
-    if (playgroundCanvas.getContext){
-	ctx = playgroundCanvas.getContext('2d');
+    if (faceCanvas.getContext){
+	ctx = faceCanvas.getContext('2d');
   	drawStuff();
 
   	
@@ -174,7 +174,7 @@ function updateImagePixels() {
     //effectPurpleGreen2();
     //distort();
     
-    ctx.putImageData(imagePixels, 0, 0);//, canvasWidth, canvasHeight);
+    ctx.putImageData(imagePixels, 0, 0, canvasWidth, canvasHeight);
     
 }
 function drawStuff() {
