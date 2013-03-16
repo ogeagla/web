@@ -1,0 +1,7 @@
+py_eclipse_workspace
+pix*
+*.*~
+*.pyc
+*.db
+*.project
+*.*project
