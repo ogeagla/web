@@ -2,205 +2,117 @@
 <html >
   <head>
     <!--<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> -->
+    <title>Octavian Geagla</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="css/style.css" type="text/css"/>
     <link rel="stylesheet" href="css/playground.css" type="text/css"/>
     <script src="http://code.jquery.com/jquery-latest.js"></script>
-    <script type="text/javascript" src="js/index.js"></script>
-	 <script type="text/javascript" src="js/playground.js"></script>
-	<script type="text/javascript" src="js/face.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>   
+    <script type="text/javascript" src="js/face.js"></script>
 
   </head>
 
   <body>
-  <noscript>Allow JS or you will have to view source to see content</noscript>
+    <noscript>Allow JS or you will have to view source to see content</noscript>
     <div id="wrapper">
       <div id="headerwrap">
         <div id="header">
           
-            <ul class="tabNav">
-	      		<li class="current"><a href="#welcome">Welcome</a></li>
-	      		<li><a href="#about">About</a></li>
-	      		<li><a href="#projects">Projects</a></li>
-	      		<li><a href="#dsdc">DSDC</a></li>
-	      		<!--<li><a href="#playground">Playground</a></li>-->
-	      		<!--<li><a href="#pics">ClimbPics</a></li>-->
-
-	    		</ul>
+          <ul class="tabNav">
+	    <li class="current"><a href="#home">Home</a></li>	    	 
+	    <li><a href="#dsdc">DSDC</a></li>	  
+	  </ul>
           
-         
+          
         </div>
       </div>
       <div id="contentliquid"><div id="contentwrap">
-          <div id="content">          
-            <div class="tabContainer">
-	      		<div class="tab current" id="welcome">
-						Welcome!  This is a work in progress.  Please navigate using the tabs above.
-	      		</div>
-	      		<div class="tab" id="about">
-		<h3>What I Do </h3>
-		<br />
-		I currently work as an Analytics Research Engineer at Netuitive in Reston, VA.:
-		<br /> <br /> 
-		<ul class="aboutlist">
-		  <li>Design and develop predictive models and algorithms.</li>
-		  <li>Rapid application prototyping.</li>
-		</ul> 
-		<br />
-		<h3>What I Can Do </h3>
-		<br />
-		
-		
-		Math-ish-y:
-		<br />
-		<br />
-		<ul class="aboutlist">
-		  <li>Machine learning and statistical methods. </li>
-		  <li>Non-linear optimization and solving. </li>
-		  <li>Numerical methods and complexity analysis. </li>
-		  <li>Non-deterministic/noisy systems. </li>
-		  <li>High performance and parallel computing. </li>
- 		</ul>
-		<br />
-		Dev-ish-y:
-		<ul class="aboutlist">
-		  <br />
-		  <li>Some data science here, some big data there.</li>
-		  <li>Data-centric architecture design. </li>
-		  <li>DB/back-end/API and front-end design and development. </li>
-		  <li>Visualization and UX. </li>
-		  <br />
-
- 		</ul>
-		<br />
-		<h3>What I Like To Do</h3>
-		<br />
-		<ul class="aboutlist">
-		  
-		  <li>Do unicorn magic and tell you lots of things about your data. </li>
-		  <li>Build cool stuff with the said data. </li>
-
-		</ul>
-
-		
-		
-		
-		
-	      </div>
-
-	      		<div class="tab" id="projects">
-		<br />
-		
-		<ul class="aboutlist">
-		  <li><a href="https://github.com/ogeagla/web">This web page</a> on github.</li>
-		  <br />
-		  <li><a href="http://hashmeat.org">HashMeat</a> (<a href="https:github.com/ogeagla/hackmeat">on github</a>).  The product of Data Community DC's contingent at <a href="http://www.foodtechconnect.com/2012/11/07/get-ready-to-hack-meat-food-tech-hackathon/">Hack//Meat</a>, a hackathon of meat.  <a href="http://datacommunitydc.org/blog/2012/12/hackmeat-or-data-community-dc-members-go-to-nyc/">Blog post</a> about HashMeat.</li>
-		  <br />
-		  <li><a href="http://octaviangeagla.com/#dsdc">DSDC Visualization Contest 2012</a> and <a href="https:github.com/ogeagla/muviz">on github</a>.</li>
-		  	</ul>
-	      </div>
-	      <div class="tab" id="dsdc">
-	      	<h3>Data Science DC Visualization Contest 2012 Entry: DSDC Members' Nth-Reply Hour-of-Day Density for M-Quantile Descending Total Attendance</h3>
-	      	           <!-- %titleStr = sprintf('First Attendance Density for Descending Total Attendance %d-Quantile', rollUps);
-            %returns n-th attendence invitation reply time bin (and per member)-->
-	      	
-	      	<br />
-	      	The image below is the entry.  In summary, we are visualizing the hour-of-day of a member's Nth reply partitioned into quantiles based on descending total attendence by member.
-	      	<br />
-	    		<br />
-	    		For each plot:
-	    			<ul class="aboutlist">
-	    				<li>The horizontal axis is a tally of the time, binned by hour, starting at midnight and ending at midnight.  The time represents the hour of day when the DSDC member replied to the meetup invitation.  There are 24 horizontal bins. </li>
-	    				<li>The vertical axis represents (in chronological order) a tally of the Nth reply.  I.e., if a member's first meetup reply was for the 5th meetup at noon and the second reply was for the 7th meetup and was also at noon, this data is tallied in the bottom-most and first up from the bottom bins around the horizontal midpoint, representing a first and second reply.  There are 17 vertical bins.  Only one person had a 17th reply, which implies one person had perfect attendance. </li>
-	    			</ul>
-
-	    		
-	    		<br />
-	    		As a whole:
-	    		<ul class="aboutlist"> 
-	    			<li>The first row represents the total Nth reply hour-of-day density.   </li>
-	    			<li>Each successive row partitions the data into M (where M = 1, 2, 4, and 8 for the 1st, 2nd, 3rd, and 4th rows, respectively) quantiles by total member attendance, first sorted in descending order of meetups attended.   </li>
-	    			<li>The quantile for each row is the number of columns (plots per row), where the left-most plot is the top quantile. </li>
-	    			<li>This means that the first (left-most) plot of the 2-quantile row contains the hour-of-day Nth reply density for the upper %50 of members by total attendance count.   </li>
-	    			<li>For example, the last (right-most) plot of the 8-quantile row represents the bottom %12.5 of all members by the total meetups they have replied to. </li>
-	    			
-	    		</ul>
-	    			
-	    		
-	    		<br />
-	    		
-	      	<img src="media/img/dsdc_visualization.png" class="dsdcviz"/>
-	      	<div class="caption"><a href="media/img/dsdc_visualization.png">Higher Quality Version</a></div>
-	      	<br />
-	      	<h3>Sure Octavian, that's nice, but why? </h3>
-	      	I believe the following:
-	      	<ul class="aboutlist"> 
-	      		<li>For a given attendance record (or newness to the group), one can observe the trend that the subsequent replies take in terms of the hour of day when the member will reply to the invite.  This can be useful when trying to infer which times are best to send an invitation email or target low-attendance users.</li>
-	      		<li>From observing the 8-quantile plots, one can see that the members with the best attendance (left-most plot) seem to scatter the replies throughout the day.  We are not too concerned with this group, as they are the officers and regulars of the meetup; they will attend with high probability.  However, looking at the bottom five 8-quantiles, we begin to observe hot spots of replies centered around a particular hour of the day.  Perhaps this data is actionable!</li>
-	      		<li>In conclusion, there could be value in ths visualization for tracking trends of member reply times partitioned by how "regular" they are to the meetup.  More data are needed!</li>
-	      	
-	      	</ul>
-	      </div>
-	      <div class="tab" id="playground">
-	      	<canvas id="playgroundCanvas" width="400" height="600">
-	      		fallback
-	      	</canvas>
-	      </div>
+        <div id="content">          
+          <div class="tabContainer">
+	    <div class="tab current" id="home">              
+            I currently work as a software engineer in Boulder, CO.
+            <br />
+            <br />
+            Some projects:
+            <br />
 	      
-	      
-	      <!--<div class="tab" id="pics">
-		
-		
-		<div id="image"><img src="media/img/2012-09-29_17-40-09_896.jpg" border="0" style="height: 75%; width: auto; margin-left: 26%; position: fixed;"/></div>	
-		<a href="#pics" rel="media/img/2012-09-29_17-40-09_896.jpg" class="image" ><img src="media/img/2012-09-29_17-40-09_896.thumb.jpg" class="thumb" border="0" id="thumb"/></a>
-		<a href="#pics" rel="media/img/2012-09-29_17-41-39_396.jpg" class="image" ><img src="media/img/2012-09-29_17-41-39_396.thumb.jpg" class="thumb" border="0" /></a>
-		<a href="#pics" rel="media/img/2012-10-21_11-59-57_47.jpg" class="image" ><img src="media/img/2012-10-21_11-59-57_47.thumb.jpg" class="thumb" border="0" /></a>
-		<a href="#pics" rel="media/img/2012-10-21_12-02-23_332.jpg" class="image" ><img src="media/img/2012-10-21_12-02-23_332.thumb.jpg" class="thumb" border="0" /></a><br />
-		<a href="#pics" rel="media/img/2012-10-21_12-02-53_764.jpg" class="image" ><img src="media/img/2012-10-21_12-02-53_764.thumb.jpg" class="thumb" border="0" /></a>
-		<a href="#pics" rel="media/img/2012-10-21_12-03-01_258.jpg" class="image" ><img src="media/img/2012-10-21_12-03-01_258.thumb.jpg" class="thumb" border="0" /></a>
-		<a href="#pics" rel="media/img/2012-10-21_12-04-31_860.jpg" class="image" ><img src="media/img/2012-10-21_12-04-31_860.thumb.jpg" class="thumb" border="0" /></a><br />
-		<a href="#pics" rel="media/img/IMG_20120929_170508.jpg" class="image" ><img src="media/img/IMG_20120929_170508.thumb.jpg" class="thumb" border="0" /></a>
-		<a href="#pics" rel="media/img/IMG_20120929_172706.jpg" class="image" ><img src="media/img/IMG_20120929_172706.thumb.jpg" class="thumb" border="0" /></a><br />
-		<a href="#pics" rel="media/img/IMG_20120929_154701.jpg" class="image" ><img src="media/img/IMG_20120929_154701.thumb.jpg" class="thumb" border="0" /></a>
-		<a href="#pics" rel="media/img/IMG_20120929_154712.jpg" class="image" ><img src="media/img/IMG_20120929_154712.thumb.jpg" class="thumb" border="0" /></a>
-		<a href="#pics" rel="media/img/IMG_20120929_154746.jpg" class="image" ><img src="media/img/IMG_20120929_154746.thumb.jpg" class="thumb" border="0" /></a><br />
-		<a href="#pics" rel="media/img/IMG_20120929_170214.jpg" class="image" ><img src="media/img/IMG_20120929_170214.thumb.jpg" class="thumb" border="0" /></a>
-		<a href="#pics" rel="media/img/IMG_20120929_170232.jpg" class="image" ><img src="media/img/IMG_20120929_170232.thumb.jpg" class="thumb" border="0" /></a><br />
-		<a href="#pics" rel="media/img/IMG_20120929_170242.jpg" class="image" ><img src="media/img/IMG_20120929_170242.thumb.jpg" class="thumb" border="0" /></a>
-		<a href="#pics" rel="media/img/IMG_20120929_170307.jpg" class="image" ><img src="media/img/IMG_20120929_170307.thumb.jpg" class="thumb" border="0" /></a><br />
-
-		<a href="#pics" rel="media/img/2012-10-21_12-05-15_100.jpg" class="image" ><img src="media/img/2012-10-21_12-05-15_100.thumb.jpg" class="thumb" border="0" /></a>
-		<a href="#pics" rel="media/img/2012-10-21_12-05-41_596.jpg" class="image" ><img src="media/img/2012-10-21_12-05-41_596.thumb.jpg" class="thumb" border="0" /></a><br />
-		<a href="#pics" rel="media/img/2012-10-21_12-05-55_527.jpg" class="image" ><img src="media/img/2012-10-21_12-05-55_527.thumb.jpg" class="thumb" border="0" /></a>
-		<a href="#pics" rel="media/img/2012-10-21_12-05-59_517.jpg" class="image" ><img src="media/img/2012-10-21_12-05-59_517.thumb.jpg" class="thumb" border="0" /></a><br />
-		<a href="#pics" rel="media/img/2012-10-21_12-06-03_383.jpg" class="image" ><img src="media/img/2012-10-21_12-06-03_383.thumb.jpg" class="thumb" border="0" /></a>
-		<a href="#pics" rel="media/img/2012-10-21_12-06-12_249.jpg" class="image" ><img src="media/img/2012-10-21_12-06-12_249.thumb.jpg" class="thumb" border="0" /></a><br />
-
-
-		
-
-	      </div>-->
+	      <ul class="aboutlist">
+                <li><a href="http://octaviangeagla.com/bap">BAP</a></li>
+                <br />
+		<li><a href="https://github.com/ogeagla/web">This web page</a> on github.</li>
+		<br />
+		<li><a href="http://hashmeat.org">HashMeat</a> (<a href="https:github.com/ogeagla/hackmeat">on github</a>).  The product of Data Community DC's contingent at <a href="http://www.foodtechconnect.com/2012/11/07/get-ready-to-hack-meat-food-tech-hackathon/">Hack//Meat</a>, a hackathon of meat.  <a href="http://datacommunitydc.org/blog/2012/12/hackmeat-or-data-community-dc-members-go-to-nyc/">Blog post</a> about HashMeat.</li>
+		<br />
+		<li><a href="http://octaviangeagla.com/#dsdc">DSDC Visualization Contest 2012</a> and <a href="https:github.com/ogeagla/muviz">on github</a>.</li>
+	      </ul>
 	    </div>
-            
-          </div>
+	    
+	    <div class="tab" id="dsdc">
+	      <h3>Data Science DC Visualization Contest 2012 Entry: DSDC Members' Nth-Reply Hour-of-Day Density for M-Quantile Descending Total Attendance</h3>
+	      <!-- %titleStr = sprintf('First Attendance Density for Descending Total Attendance %d-Quantile', rollUps);
+              %returns n-th attendence invitation reply time bin (and per member)-->
+	      
+	      <br />
+	      The image below is the entry.  In summary, we are visualizing the hour-of-day of a member's Nth reply partitioned into quantiles based on descending total attendence by member.
+	      <br />
+	      <br />
+	      For each plot:
+	      <ul class="aboutlist">
+	    	<li>The horizontal axis is a tally of the time, binned by hour, starting at midnight and ending at midnight.  The time represents the hour of day when the DSDC member replied to the meetup invitation.  There are 24 horizontal bins. </li>
+	    	<li>The vertical axis represents (in chronological order) a tally of the Nth reply.  I.e., if a member's first meetup reply was for the 5th meetup at noon and the second reply was for the 7th meetup and was also at noon, this data is tallied in the bottom-most and first up from the bottom bins around the horizontal midpoint, representing a first and second reply.  There are 17 vertical bins.  Only one person had a 17th reply, which implies one person had perfect attendance. </li>
+	      </ul>
+
+	      
+	      <br />
+	      As a whole:
+	      <ul class="aboutlist"> 
+	    	<li>The first row represents the total Nth reply hour-of-day density.   </li>
+	    	<li>Each successive row partitions the data into M (where M = 1, 2, 4, and 8 for the 1st, 2nd, 3rd, and 4th rows, respectively) quantiles by total member attendance, first sorted in descending order of meetups attended.   </li>
+	    	<li>The quantile for each row is the number of columns (plots per row), where the left-most plot is the top quantile. </li>
+	    	<li>This means that the first (left-most) plot of the 2-quantile row contains the hour-of-day Nth reply density for the upper %50 of members by total attendance count.   </li>
+	    	<li>For example, the last (right-most) plot of the 8-quantile row represents the bottom %12.5 of all members by the total meetups they have replied to. </li>
+	    	
+	      </ul>
+	      
+	      
+	      <br />
+	      
+	      <img src="media/img/dsdc_visualization.png" class="dsdcviz"/>
+	      <div class="caption"><a href="media/img/dsdc_visualization.png">Higher Quality Version</a></div>
+	      <br />
+	      <h3>Sure Octavian, that's nice, but why? </h3>
+	      I believe the following:
+	      <ul class="aboutlist"> 
+	      	<li>For a given attendance record (or newness to the group), one can observe the trend that the subsequent replies take in terms of the hour of day when the member will reply to the invite.  This can be useful when trying to infer which times are best to send an invitation email or target low-attendance users.</li>
+	      	<li>From observing the 8-quantile plots, one can see that the members with the best attendance (left-most plot) seem to scatter the replies throughout the day.  We are not too concerned with this group, as they are the officers and regulars of the meetup; they will attend with high probability.  However, looking at the bottom five 8-quantiles, we begin to observe hot spots of replies centered around a particular hour of the day.  Perhaps this data is actionable!</li>
+	      	<li>In conclusion, there could be value in ths visualization for tracking trends of member reply times partitioned by how "regular" they are to the meetup.  More data are needed!</li>
+	      	
+	      </ul>
+	    </div>
+
+	    
+	    
+	  </div>
+          
+        </div>
       </div></div>
       <div id="leftcolumnwrap">
         <div id="leftcolumn">
           <p>
-          	
-          	<canvas id="faceCanvas" width="60" height="90">
-	      			<img src="media/img/meface.JPG" class="face"/><br />
-	      	</canvas>
-	   		<br />
-	    		Contact me <a href="mailto:octavian@octaviangeagla.com">here</a> <br /> or <a href="mailto:ogeagla@gmail.com">here</a>.
-	    		
-	  		</p>
+            
+            <canvas id="faceCanvas" width="60" height="90">
+	      <img src="media/img/meface.JPG" class="face"/><br />
+	    </canvas>
+	    <br />
+	    Contact me <a href="mailto:octavian@octaviangeagla.com">here</a> <br /> or <a href="mailto:ogeagla@gmail.com">here</a>.
+	    
+	  </p>
         </div>
       </div>
       <div id="footerwrap">
         <div id="footer">
           <p>All <a href="media">media</a> licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a><br />
-				All <a href="https://github.com/ogeagla/web">code</a> licensed under <a href="https://www.gnu.org/copyleft/lesser.html">LGPLv3</a>          
+	    All <a href="https://github.com/ogeagla/web">code</a> licensed under <a href="https://www.gnu.org/copyleft/lesser.html">LGPLv3</a>          
           </p>
         </div>
       </div>
