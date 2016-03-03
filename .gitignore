@@ -5,3 +5,4 @@ pix*
 *.db
 *.project
 *.*project
+.idea
