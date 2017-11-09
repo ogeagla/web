@@ -111,18 +111,20 @@ ul.tabNav li.current {
 }
 ul.tabNav a { 
     border-radius: 15px; 
-    background: #ececec; 
-    border: 1px solid #dedede; 
+    background: #f0df40;
+    border: 1px solid #000000;
     border-width: 1px 1px 0; 
-    color: #333; 
+    color: #000000;
     display: block; 
     padding: 4px 4px 5px 4px; 
     text-decoration: none; 
 }
 ul.tabNav li.current a { 
-    background: #dedede; 
+    background: #000000;
+    border: 1px solid #000000;
     border: none; 
-    padding: 8px; 
+    padding: 8px;
+    color: #f0df40;
 }
 
 div.tabContainer { 
