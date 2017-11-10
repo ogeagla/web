@@ -6,10 +6,10 @@ colors[0] = '#27221d';
 colors[1] = '#3f3225';
 colors[2] = '#523a22';
 colors[3] = '#68411b';
-colors[4] = '#945211';
-colors[5] = '#b8600a';
-colors[6] = '#db6e04';
-colors[7] = '#f37901';
+colors[4] = '#ffff3d';
+colors[5] = '#ffff3d';
+colors[6] = '#ffff3d';
+colors[7] = '#ffff3d';
 
 var faceCanvas = '';//= document.getElementById('faceCanvas');
 var ctx = '';
@@ -66,101 +66,6 @@ $(document).ready(function(){
 
 });
 
-
-
-function effectPurpleGreen() {
-    
-    for (y = 0; y < canvasHeight; y++) {
-	
-	for(x = 0; x < canvasWidth; x++) {
-	    var p = (4*y*canvasWidth) + 4*x;
-	    var r = imagePixels.data[p];
-	    var g = imagePixels.data[p + 1];
-	    var b = imagePixels.data[p + 2];
-	    var a = imagePixels.data[p + 3];
-	    
-	    dr =  (x+y)%(255-r);
-	    dg = (y-x)%(255-b);
-	    
-	    imagePixels.data[p] = r + 1.0 ^(y%2) * dr;
-	    imagePixels.data[p + 1] = g + dg;
-	}
-	
-    }
-    
-}
-function effectPurpleGreen2() {
-    
-    for (y = 0; y < canvasHeight; y++) {
-	
-	for(x = 0; x < canvasWidth; x++) {
-	    var p = (4*y*canvasWidth) + 4*x;
-	    var r = imagePixels.data[p];
-	    var g = imagePixels.data[p + 1];
-	    var b = imagePixels.data[p + 2];
-	    var a = imagePixels.data[p + 3];
-	    
-	    dr =  (x+y)%(255-r);
-	    dg = (y-x)%(255-b);
-	    db = (dr * dg) % (255-g);
-	    da = (dr + dg + db) % (255-a);
-	    
-	    imagePixels.data[p] = r + 1.0 ^(y%2) * dr;
-	    imagePixels.data[p + 1] = g + dg;
-	    imagePixels.data[p + 2] = b + db;
-	    imagePixels.data[p + 3] = a + da;
- 	}
-	
-    }
-    
-}
-
-function distort() {
-    var newData = new Array();
-    var dataCount = 0;
-    
-    for (y = 0; y < canvasHeight; y++) {
-	
-	for(x = 0; x < canvasWidth; x++) {
-	    
-	    if((y>canvasHeight/3.) && (y<2.*canvasHeight/3.) && (x>canvasWidth/3.) && (x<2.*canvasWidth/3.)) {
-		var p = (4*y*canvasWidth) + 4*x;
-		var r = imagePixels.data[p];
-		var g = imagePixels.data[p + 1];
-		var b = imagePixels.data[p + 2];
-		var a = imagePixels.data[p + 3];
-		
-		imagePixels.data[p] = 0;
-		
-		//var newX = x-
-		    //dataCount = dataCount + 4;
-		
-		
-	    }
- 	}
-	
-    }
-    for (y = 0; y < canvasHeight; y++) {
-	
-	for(x = 0; x < canvasWidth; x++) {
-	    
-	    if((y>canvasHeight/3.) && (y<2.*canvasHeight/3.) && (x>canvasWidth/3.) && (x<2.*canvasWidth/3.)) {
-		var p = (4*y*canvasWidth) + 4*x;
-		var r = imagePixels.data[p];
-		var g = imagePixels.data[p + 1];
-		var b = imagePixels.data[p + 2];
-		var a = imagePixels.data[p + 3];
-		
-		imagePixels.data[p] = 0;
-		
-		
-		
-	    }
- 	}
-	
-    }
-    
-}
 
 function updateImage() {
     
