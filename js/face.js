@@ -50,7 +50,7 @@ image.src = 'media/img/meface.JPG';
 $(document).ready(function(){
 
     faceCanvas = document.getElementById('faceCanvas');
-    
+
     canvasWidth = faceCanvas.width;//600;
     canvasHeight = faceCanvas.height;//800;
     eyeRadius = canvasHeight/50;
@@ -59,7 +59,7 @@ $(document).ready(function(){
 	ctx = faceCanvas.getContext('2d');
   	drawStuff();
 
-  	
+
     } else {
 	// canvas-unsupported code here
     }
@@ -68,47 +68,47 @@ $(document).ready(function(){
 
 
 function updateImage() {
-    
+
     ctx.drawImage(image, 0, 0, canvasWidth, canvasHeight);
-    
+
 }
 function updateImagePixels() {
-    
+
     imagePixels = ctx.getImageData(0, 0, canvasWidth, canvasHeight);
-    
+
     //effectPurpleGreen2();
     //distort();
-    
+
     ctx.putImageData(imagePixels, 0, 0);//, canvasWidth, canvasHeight);
-    
+
 }
 function drawStuff() {
 
-    
+
     updateImage();
     //updateImagePixels();
     eyesIntervalHandle = eyesTrigger();
-    
+
 
 }
 
 
 function eyesTrigger() {
-    return setInterval(drawEyes, 100);
+    // return setInterval(drawEyes, 100);
 }
 
 function drawEyes() {
-    
-    
+
+
     if(colorIndex == 0) {
 	ctx.globalAlpha = 1.;
-	
+
 	dColorIndex = dColorIndex * -1.;
-	
+
     }
     if(colorIndex == colors.length - 2){
 	dColorIndex = dColorIndex*-1.;
-    }	
+    }
     ctx.globalAlpha = 0.52;
     //console.log(colorIndex);
     updateImage();
@@ -116,14 +116,14 @@ function drawEyes() {
 
     drawCircle(ctx, leftEyeXRatio*canvasWidth, leftEyeYRatio*canvasHeight, eyeRadius, colors[colorIndex], colors[colorIndex]);
     drawCircle(ctx, rightEyeXRatio*canvasWidth, rightEyeYRatio*canvasHeight, eyeRadius, colors[colorIndex],colors[colorIndex]);
-    
-    
-    
+
+
+
     colorIndex = colorIndex + dColorIndex;
 }
 
 function drawCircle(ctx, x, y, r, fillColor, strokeColor) {
-    
+
     ctx.beginPath();
     ctx.arc(x, y, r, 0, 2 * Math.PI, false);
     ctx.fillStyle = fillColor;//green
